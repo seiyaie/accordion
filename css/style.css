@@ -1,0 +1,64 @@
+.l-container {
+    padding-top: 120px;
+}
+
+.accordion {
+    display: grid;
+    gap: 24px;
+}
+
+.details {
+    width: 480px;
+    margin-inline: auto;
+    background: #eee;
+}
+
+.summary {
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    background: #0099ff;
+    color: #fff;
+    font-size: 18px;
+    padding: 0.5em;
+    font-weight: bold;
+    position: relative;
+}
+
+.summary::-webkit-details-marker {
+    display: none;
+}
+
+.summary::before,
+.summary::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    background: #fff;
+}
+
+.summary::before {
+    width: 16px;
+    height: 2px;
+    right: 9px;
+}
+
+.summary::after {
+    width: 2px;
+    height: 16px;
+    right: 16px;
+    transition: rotate 0.3s;
+}
+
+.details[open] .summary::after {
+    rotate: 90deg;
+}
+
+.content-box {
+    overflow: hidden;
+}
+
+.answer {
+    padding: 10px;
+}
